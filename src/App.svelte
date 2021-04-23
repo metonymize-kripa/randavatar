@@ -137,6 +137,15 @@
         "Black"
     ]
 }
+  
+const mapAttribOfSecurityToAvataar = {
+	"country": ["skinColor","hairColor"],
+	"market": ["avatarStyle","clotheType"],
+	"sector": ["topType", "accessoriesType"],
+	"size": ["facialHairType"],
+	"volatility": ["mouthType"],
+	"return": ["eyebrowType","eyeType"]
+}
  
  function createRandomAvataar(){
 	 return 'https://avataaars.io/?'+
