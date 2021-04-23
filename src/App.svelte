@@ -161,11 +161,9 @@
 
 <main>
  <h1>Svelte + Node.js + Avataar</h1>
-
  <img src={createRandomAvataar()}
   />
-  </p>
-  <br />
+  <br>
   <h2>The date according to Node.js is:</h2>
   <p>{date ? date : 'Loading date...'}</p>
 </main>
