@@ -1,6 +1,156 @@
 <script>
   import { onMount } from "svelte";
   export let date;
+  
+  import _ from "underscore";
+  const avataar_inputs = {
+    "avatarStyle": [
+        "Circle",
+        "Transparent"
+    ],
+    "topType" : [
+        "NoHair",
+        "Eyepatch",
+        "Hat",
+        "Hijab",
+        "Turban",
+        "WinterHat1",
+        "WinterHat2",
+        "WinterHat3",
+        "WinterHat4",
+        "LongHairBigHair",
+        "LongHairBob",
+        "LongHairBun",
+        "LongHairCurly",
+        "LongHairCurvy",
+        "LongHairDreads",
+        "LongHairFrida",
+        "LongHairFro",
+        "LongHairFroBand",
+        "LongHairNotTooLong",
+        "LongHairShavedSides",
+        "LongHairMiaWallace",
+        "LongHairStraight",
+        "LongHairStraight2",
+        "LongHairStraightStrand",
+        "ShortHairDreads01",
+        "ShortHairDreads02",
+        "ShortHairFrizzle",
+        "ShortHairShaggyMullet",
+        "ShortHairShortCurly",
+        "ShortHairShortFlat",
+        "ShortHairShortRound",
+        "ShortHairShortWaved",
+        "ShortHairSides",
+        "ShortHairTheCaesar",
+        "ShortHairTheCaesarSidePart"
+    ],
+    "accessoriesType": [
+        "Blank",
+        "Kurt",
+        "Prescription01",
+        "Prescription02",
+        "Round",
+        "Sunglasses",
+        "Wayfarers"
+    ],
+    "hairColor": [
+        "Auburn",
+        "Black",
+        "Blonde",
+        "BlondeGolden",
+        "Brown",
+        "BrownDark",
+        "PastelPink",
+        "Platinum",
+        "Red",
+        "SilverGray"
+    ],
+    "facialHairType": [
+        "Blank",
+        "BeardMedium",
+        "BeardLight",
+        "BeardMagestic",
+        "MoustacheFancy",
+        "MoustacheMagnum"
+    ],
+    "clotheType": [
+        "BlazerShirt",
+        "BlazerSweater",
+        "CollarSweater",
+        "GraphicShirt",
+        "Hoodie",
+        "Overall",
+        "ShirtCrewNeck",
+        "ShirtScoopNeck",
+        "ShirtVNeck"
+    ],
+    "eyeType": [
+        "Close",
+        "Cry",
+        "Default",
+        "Dizzy",
+        "EyeRoll",
+        "Happy",
+        "Hearts",
+        "Side",
+        "Squint",
+        "Surprised",
+        "Wink",
+        "WinkWacky"
+    ],
+    "eyebrowType": [
+        "Angry",
+        "AngryNatural",
+        "Default",
+        "DefaultNatural",
+        "FlatNatural",
+        "RaisedExcited",
+        "RaisedExcitedNatural",
+        "SadConcerned",
+        "SadConcernedNatural",
+        "UnibrowNatural",
+        "UpDown",
+        "UpDownNatural"
+    ],
+    "mouthType": [
+        "Concerned",
+        "Default",
+        "Disbelief",
+        "Eating",
+        "Grimace",
+        "Sad",
+        "ScreamOpen",
+        "Serious",
+        "Smile",
+        "Tongue",
+        "Twinkle",
+        "Vomit"
+    ],
+    "skinColor": [
+        "Tanned",
+        "Yellow",
+        "Pale",
+        "Light",
+        "Brown",
+        "DarkBrown",
+        "Black"
+    ]
+}
+ 
+ function createRandomAvataar(){
+	 return 'https://avataaars.io/?'+
+		 'avatarStyle='+_.sample(avataar_inputs["avatarStyle"])+
+		 '&topType='+_.sample(avataar_inputs["topType"])+
+		 '&accessoriesType='+_.sample(avataar_inputs["accessoriesType"])+
+		 '&hairColor='+_.sample(avataar_inputs["hairColor"])+
+		 '&facialHairType='+_.sample(avataar_inputs["facialHairType"])+
+		 '&clotheType='+_.sample(avataar_inputs["clotheType"])+
+		 '&eyeType='+_.sample(avataar_inputs["eyeType"])+
+		 '&eyebrowType='+_.sample(avataar_inputs["eyebrowType"])+
+		 '&mouthType='+_.sample(avataar_inputs["mouthType"])+
+		 '&skinColor='+_.sample(avataar_inputs["skinColor"])
+ }
 
   onMount(async () => {
     const res = await fetch("/api/date");
@@ -10,37 +160,10 @@
 </script>
 
 <main>
-  <h1>Svelte + Node.js API</h1>
-  <h2>
-    Deployed with
-    <a href="https://vercel.com/docs" target="_blank" rel="noreferrer noopener">
-      Vercel
-    </a>
-    !
-  </h2>
-  <p>
-    <a
-      href="https://github.com/vercel/vercel/tree/main/examples/svelte"
-      target="_blank"
-      rel="noreferrer noopener">
-      This project
-    </a>
-    is a
-    <a href="https://svelte.dev/">Svelte</a>
-    app with three directories,
-    <code>/public</code>
-    for static assets,
-    <code>/src</code>
-    for components and content, and
-    <code>/api</code>
-    which contains a serverless
-    <a href="https://nodejs.org/en/">Node.js</a>
-    function. See
-    <a href="/api/date">
-      <code>api/date</code>
-      for the Date API with Node.js
-    </a>
-    .
+ <h1>Svelte + Node.js + Avataar</h1>
+
+ <img src={createRandomAvataar()}
+  />
   </p>
   <br />
   <h2>The date according to Node.js is:</h2>
