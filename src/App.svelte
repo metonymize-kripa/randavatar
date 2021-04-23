@@ -176,5 +176,5 @@ function createRandomStockChart(){
 }
 </script>
 
-<img src={createRandomAvataar()} />
-<iframe src={createRandomStockChart()}> </iframe>
+<img src={createRandomAvataar()} height=400/>
+<iframe src={createRandomStockChart()} height=400> </iframe>
