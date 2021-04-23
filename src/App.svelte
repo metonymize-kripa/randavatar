@@ -159,4 +159,4 @@
   });
 </script>
 
-{createRandomAvataar()}
+<img src={createRandomAvataar()} />
