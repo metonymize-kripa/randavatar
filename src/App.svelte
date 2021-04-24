@@ -1,3 +1,9 @@
+<svelte:head>
+  <title>Chernoff 2.0</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/chota@latest">
+</svelte:head>
+
 <script>
   import { onMount } from "svelte";
   export let date;
@@ -175,5 +181,29 @@ function createRandomStockChart(){
 }
 </script>
 
-<img src={createRandomAvataar()} height=420/>
-<iframe src={createRandomStockChart()} height=420 width=700 frameborder="0" allow="encrypted-media" allowfullscreen allowtransparency> </iframe>
+<style>
+	body {
+	    max-width:90rem;
+	    margin:0 auto;
+	    padding:2rem;
+	}
+	.card{
+	    margin:1rem auto;
+	}
+</style>
+
+   <div class="card" >
+    <div class="row">
+	<img src={createRandomAvataar()} height=420/>
+    </div>
+    <div class="row">
+	<iframe src={createRandomStockChart()} height=420 width=700 frameborder="0" allow="encrypted-media" allowfullscreen allowtransparency> </iframe>
+    </div>
+
+    <div class="row">
+    </div>
+
+   </div>
+
+
+
