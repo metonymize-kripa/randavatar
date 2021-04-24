@@ -194,10 +194,10 @@ function createRandomStockChart(){
 
    <div class="card" >
     <div class="row">
-	<img src={createRandomAvataar()} height=420/>
+	<img src={createRandomAvataar()} height=210/>
     </div>
     <div class="row">
-	<iframe src={createRandomStockChart()} height=420 width=700 frameborder="0" allow="encrypted-media" allowfullscreen allowtransparency> </iframe>
+	<iframe src={createRandomStockChart()} height=210 frameborder="0" allow="encrypted-media" allowfullscreen allowtransparency> </iframe>
     </div>
 
     <div class="row">
