@@ -193,12 +193,12 @@ function createRandomStockChart(){
 </style>
 
    <div class="card" >
-	   <h1>Chernoff 2.0</h1>
+	   <h1 class="text-center">Chernoff 2.0</h1>
     <div class="row">
-	<img src={createRandomAvataar()} height=420/>
+	<img src={createRandomAvataar()} height=300 class="text-center"/>
     </div>
     <div class="row">
-	<iframe src={createRandomStockChart()} height=420 frameborder="0" allow="encrypted-media" allowfullscreen allowtransparency> </iframe>
+	<iframe src={createRandomStockChart()} height=400 width=600 frameborder="0" allow="encrypted-media" allowfullscreen allowtransparency class="text-center"> </iframe>
     </div>
 
     <div class="row">
