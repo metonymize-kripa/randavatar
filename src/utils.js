@@ -1,3 +1,5 @@
+import _ from 'underscore';
+
 export function makeString() {
   return "Test String returned"
 }
