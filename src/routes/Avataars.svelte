@@ -144,7 +144,7 @@ const mapAttribOfSecurityToAvataar = {
 	"return": ["eyebrowType","eyeType"]
 }
  
- function createRandomAvataar(){
+ export function createRandomAvataar(){
 	 return 'https://avataaars.io/?'+
 		 'avatarStyle='+_.sample(avataar_inputs["avatarStyle"])+
 		 '&topType='+_.sample(avataar_inputs["topType"])+
