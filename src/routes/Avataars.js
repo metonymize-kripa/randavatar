@@ -1,4 +1,3 @@
-<script>
 import _ from "underscore";
   const avataar_inputs = {
     "avatarStyle": [
@@ -156,6 +155,3 @@ const mapAttribOfSecurityToAvataar = {
 		 '&eyebrowType='+_.sample(avataar_inputs["eyebrowType"])+
 		 '&mouthType='+_.sample(avataar_inputs["mouthType"])+
 		 '&skinColor='+_.sample(avataar_inputs["skinColor"])
- }
-  
-</script>
