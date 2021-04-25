@@ -9,6 +9,8 @@
   export let date;
   
   import _ from "underscore";
+  import {makeString} from './utils.js';
+	
   const avataar_inputs = {
     "avatarStyle": [
         "Circle",
@@ -191,7 +193,7 @@ function createRandomStockChart(){
 </style>
 
    <div class="card" >
-	   <h1 class="text-center">Chernoff 2.0</h1>
+	   <h1 class="text-center">Chernoff 2.0 pull in {makeString()}</h1>
     <div class="row">
 	<img src={createRandomAvataar()} height=300 class="text-center"/>
     </div>
