@@ -6,9 +6,9 @@
 
 <script>
   import { onMount } from "svelte";
-  import Avataars, {createRandomAvataar} from './routes/Avataars.svelte';
+ // import Avataars, {createRandomAvataar} from './routes/Avataars.svelte';
   export let date;
-/*  
+
   import _ from "underscore";
   const avataar_inputs = {
     "avatarStyle": [
@@ -167,7 +167,7 @@ const mapAttribOfSecurityToAvataar = {
 		 '&mouthType='+_.sample(avataar_inputs["mouthType"])+
 		 '&skinColor='+_.sample(avataar_inputs["skinColor"])
  }
-*/
+	
   onMount(async () => {
     const res = await fetch("/api/date");
     const newDate = await res.text();
@@ -196,9 +196,7 @@ function createRandomStockChart(){
    <div class="card" >
 	   <h1 class="text-center">Chernoff 2.0</h1>
     <div class="row" >
-	<Avataars>
 		<img src={createRandomAvataar()} height=200 class="text-center" />
-	</Avataars>
     </div>
     <div class="row">
 	<iframe src={createRandomStockChart()} height=400 width=600 frameborder="0" allow="encrypted-media" allowfullscreen allowtransparency class="text-center"> </iframe>
