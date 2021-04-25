@@ -9,8 +9,9 @@
   export let date;
   
   import _ from "underscore";
-  import {makeString} from './utils.js';
-	
+  import {makeString, createRandomAvataar} from './utils.js';
+
+/*
   const avataar_inputs = {
     "avatarStyle": [
         "Circle",
@@ -168,6 +169,7 @@ const mapAttribOfSecurityToAvataar = {
 		 '&mouthType='+_.sample(avataar_inputs["mouthType"])+
 		 '&skinColor='+_.sample(avataar_inputs["skinColor"])
  }
+ */
   onMount(async () => {
     const res = await fetch("/api/date");
     const newDate = await res.text();
