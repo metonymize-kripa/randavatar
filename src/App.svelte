@@ -6,7 +6,7 @@
 
 <script>
   import { onMount } from "svelte";
-  import {createRandomAvataar} from './routes/Avataars.js';
+  import {createRandomAvataar} from './routes/Avataars.svelte';
   export let date;
 /*  
   import _ from "underscore";
