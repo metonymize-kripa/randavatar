@@ -6,7 +6,7 @@
 
 <script>
   import { onMount } from "svelte";
-  import {createRandomAvataar} from './routes/Avataars.svelte';
+  import Avataars, {createRandomAvataar} from './routes/Avataars.svelte';
   export let date;
 /*  
   import _ from "underscore";
@@ -196,7 +196,9 @@ function createRandomStockChart(){
    <div class="card" >
 	   <h1 class="text-center">Chernoff 2.0</h1>
     <div class="row" >
-	<img src={createRandomAvataar()} height=200 class="text-center" />
+	<Avataars>
+		<img src={createRandomAvataar()} height=200 class="text-center" />
+	</Avataars>
     </div>
     <div class="row">
 	<iframe src={createRandomStockChart()} height=400 width=600 frameborder="0" allow="encrypted-media" allowfullscreen allowtransparency class="text-center"> </iframe>
