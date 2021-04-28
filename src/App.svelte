@@ -63,10 +63,10 @@ function clickHandler(){
 </style>
 
    <div class="card" >
-	   <h1 class="text-center">Merging <em>{beaconSample(beacon,sourceData)}</em> data, and more.</h1>
+	   <h1 class="text-center">Link into <em>{beaconSample(beacon,sourceData)}</em> data, and more.</h1>
 	   <h1 class="text-center">To predict if $<strong>{placeholderTicker}</strong> goes up.</h1>
 	   
-	   <input class="text-center" bind:value={inputTicker} placeholder={placeholderTicker}>
+	   <input class="text-center" width="50" bind:value={inputTicker} placeholder={placeholderTicker}>
            <button class="text-center" on:click={clickHandler}>
 		Go
 	   </button>
