@@ -39,6 +39,9 @@ function beaconSample(beacon,sampler) {
 	return _.sample(sampler)
 }
 	
+function clickHandler(){
+}
+	
 </script>
 
 <style>
@@ -56,8 +59,8 @@ function beaconSample(beacon,sampler) {
 	   <h1 class="text-center">Merging <em>{beaconSample(beacon,sourceData)}</em> data.</h1>
 	   <h1 class="text-center">To predict if <strong>{beaconSample(beacon,sp500Tickers)}</strong> goes up.</h1>
 	   
-	   <input bind:value={inputTicker} placeholder={beaconSample(beacon,sp500Tickers)} >
-           <button on:click={}>
+	   <input bind:value={inputTicker} placeholder={beaconSample(beacon,sp500Tickers)}>
+           <button on:click={clickHandler}>
 		Go
 	   </button>
 <!--
