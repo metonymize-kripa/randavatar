@@ -18,7 +18,7 @@ function createRandomStockChart(){
 	
 	let time = new Date();
 	let beacon = 0;
-	$: beacon = Math.round(time.getSeconds()/5)%2;
+	$: beacon = Math.round(time.getSeconds()/2)%2;
 	onMount(() => {
 		const interval = setInterval(() => {
 			time = new Date();
@@ -48,7 +48,8 @@ function beaconSample(beacon,sampler) {
 </style>
 
    <div class="card" >
-	   <h1 class="text-center">Sampling from {beaconSample(beacon,sourceData)}</h1>
+	   <h1 class="text-center">Merging {beaconSample(beacon,sourceData)} data.</h1>
+	   <h1 class="text-center">To predict if {beaconSample(beacon,sp500Tickers)} goes up.</h1>
     <div class="row">
 	    <div class="text-center">
 		<img src={createRandomAvataar()} height=300 class="text-center"/>
