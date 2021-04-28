@@ -17,6 +17,7 @@ function createRandomStockChart(){
 }
 	
 	let time = new Date();
+	let beacon = 0;
 	$: beacon = Math.round(time.getSeconds()/5)%2;
 	onMount(() => {
 		const interval = setInterval(() => {
