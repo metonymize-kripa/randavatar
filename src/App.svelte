@@ -14,6 +14,18 @@ const sp500Tickers = ["BT", "ABBV", "ABMD", "ACN", "ATVI", "ADBE", "AMD"];//, "A
 function createRandomStockChart(){
 	return publicUrl+_.sample(sp500Tickers)+'/embed'
 }
+	let time = new Date();
+	$: seconds = time.getSeconds();
+	onMount(() => {
+		const interval = setInterval(() => {
+			time = new Date();
+		}, 1000);
+
+		return () => {
+			clearInterval(interval);
+		};
+	});
+	
 </script>
 
 <style>
@@ -28,7 +40,7 @@ function createRandomStockChart(){
 </style>
 
    <div class="card" >
-	   <h1 class="text-center">Chernoff 2.0</h1>
+	   <h1 class="text-center">Chernoff {seconds}.0</h1>
     <div class="row">
 	<img src={createRandomAvataar()} height=300 class="text-center"/>
     </div>
