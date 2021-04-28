@@ -48,7 +48,7 @@ function beaconSample(beacon,sampler) {
 </style>
 
    <div class="card" >
-	   <h1 class="text-center">Sampling from {beaconSample(beacon,sampler)}</h1>
+	   <h1 class="text-center">Sampling from {beaconSample(beacon,sourceData)}</h1>
     <div class="row">
 	    <div class="text-center">
 		<img src={createRandomAvataar()} height=300 class="text-center"/>
