@@ -4,10 +4,6 @@
   <link rel="stylesheet" href="https://unpkg.com/chota@latest">
 </svelte:head>
 
-<style>
-	mywidth { width: 20% }
-</style>
-
 <script>
   import { onMount } from "svelte";
   import {makeString, createRandomAvataar} from './utils.js';
@@ -39,14 +35,15 @@ function createStockChart(){
 		};
 	});
 
-const sourceData = ["Twitter", "WallStreetBets", "Options Market", "Yahoo Finance", "Your Friends"]
+const sourceData = ["Twitter", "WallStreetBets", "Options Market", "Yahoo Finance", "Your Friends"];
+const tickerData = ["TSLA", "GME", "SPY", "PLTR", "AMC"];
 function beaconSample(beacon,sampler) {
 	updatePlaceholderTicker();
 	return _.sample(sampler)
 }
 	
 function updatePlaceholderTicker(){
-	placeholderTicker = _.sample(sp500Tickers);
+	placeholderTicker = _.sample(tickerData);
 }
 	
 function clickHandler(){
@@ -69,12 +66,10 @@ function clickHandler(){
 	   <h1 class="text-center">Merging <em>{beaconSample(beacon,sourceData)}</em> data, and more.</h1>
 	   <h1 class="text-center">To see if $<strong>{placeholderTicker}</strong> goes up.</h1>
 	   
-	   <mywidth>
 	   <input class="text-center" bind:value={inputTicker} placeholder={placeholderTicker}>
            <button class="text-center" on:click={clickHandler}>
 		Go
 	   </button>
-	   	   </mywidth>
 <!--
     <div class="row">
 	    <div class="text-center">
