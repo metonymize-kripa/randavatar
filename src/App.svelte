@@ -4,6 +4,10 @@
   <link rel="stylesheet" href="https://unpkg.com/chota@latest">
 </svelte:head>
 
+<style>
+	mywidth { width: 20% }
+</style>
+
 <script>
   import { onMount } from "svelte";
   import {makeString, createRandomAvataar} from './utils.js';
@@ -62,13 +66,15 @@ function clickHandler(){
 </style>
 
    <div class="card" >
-	   <h1 class="text-center">Merging <em>{beaconSample(beacon,sourceData)}</em> data.</h1>
-	   <h1 class="text-center">To predict if <strong>{placeholderTicker}</strong> goes up.</h1>
+	   <h1 class="text-center">Merging <em>{beaconSample(beacon,sourceData)}</em> data, and more.</h1>
+	   <h1 class="text-center">To see if $<strong>{placeholderTicker}</strong> goes up.</h1>
 	   
-	   <input class="text-center" size="20" bind:value={inputTicker} placeholder={placeholderTicker}>
+	   <mywidth>
+	   <input class="text-center" bind:value={inputTicker} placeholder={placeholderTicker}>
            <button class="text-center" on:click={clickHandler}>
 		Go
 	   </button>
+	   	   </mywidth>
 <!--
     <div class="row">
 	    <div class="text-center">
