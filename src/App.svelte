@@ -6,6 +6,7 @@
 
 <script>
   import { onMount } from "svelte";
+  import { fade } from 'svelte/transition';
   import {makeString, createRandomAvataar} from './utils.js';
   import _ from "underscore";
 	
@@ -63,7 +64,7 @@ function clickHandler(){
 </style>
 
    <div class="card" >
-	   <h1 class="text-center">Link into <em in:typewriter>{beaconSample(beacon,sourceData)}</em> data, and more.</h1>
+	   <h1 class="text-center">Link into <em in:fade>{beaconSample(beacon,sourceData)}</em> data, and more.</h1>
 	   <h1 class="text-center">To predict if $<strong>{placeholderTicker}</strong> goes up.</h1>
 	   
 	   <input class="text-center" width="50" bind:value={inputTicker} placeholder={placeholderTicker}>
