@@ -23,6 +23,7 @@ function createStockChart(){
 	let time = new Date();
 	let beacon = 0;
 	let inputTicker = '';
+	let placeholderTicker = 'TSLA';
 	$: beacon = Math.round(time.getSeconds()/3)%2;
 	onMount(() => {
 		const interval = setInterval(() => {
@@ -36,7 +37,12 @@ function createStockChart(){
 
 const sourceData = ["Twitter", "WallStreetBets", "Options Market", "Yahoo Finance", "Your Friends"]
 function beaconSample(beacon,sampler) {
+	updatePlaceholderTicker();
 	return _.sample(sampler)
+}
+	
+function updatePlaceholderTicker(){
+	placeholderTicker = return _.sample(sp500Tickers);
 }
 	
 function clickHandler(){
@@ -57,9 +63,9 @@ function clickHandler(){
 
    <div class="card" >
 	   <h1 class="text-center">Merging <em>{beaconSample(beacon,sourceData)}</em> data.</h1>
-	   <h1 class="text-center">To predict if <strong>{beaconSample(beacon,sp500Tickers)}</strong> goes up.</h1>
+	   <h1 class="text-center">To predict if <strong>{placeholderTicker}</strong> goes up.</h1>
 	   
-	   <input class="text-center" bind:value={inputTicker} placeholder={beaconSample(beacon,sp500Tickers)}>
+	   <input class="text-center" bind:value={inputTicker} placeholder={placeholderTicker}>
            <button class="text-center" on:click={clickHandler}>
 		Go
 	   </button>
