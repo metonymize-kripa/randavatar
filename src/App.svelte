@@ -52,7 +52,7 @@ function beaconSample(beacon,sampler) {
 </style>
 
    <div class="card" >
-	   <h1 class="text-center">Merging <span background="gold">{beaconSample(beacon,sourceData)}</span> data.</h1>
+	   <h1 class="text-center">Merging <em>{beaconSample(beacon,sourceData)}</em> data.</h1>
 	   <h1 class="text-center">To predict if <strong>{beaconSample(beacon,sp500Tickers)}</strong> goes up.</h1>
 	   
 <!--
