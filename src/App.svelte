@@ -63,8 +63,9 @@ function clickHandler(){
 </style>
 
    <div class="card" >
-	   <h1 class="text-center">Merging <em>{beaconSample(beacon,sourceData)}</em> data, and more.</h1>
-	   <h1 class="text-center">To see if $<strong>{placeholderTicker}</strong> goes up.</h1>
+	   <h1 class="text-center">Link <em>{beaconSample(beacon,sourceData)}</em> data.</h1>
+	   <h1 class="text-center">With your view.</h1>
+	   <h1 class="text-center">To predict if $<strong>{placeholderTicker}</strong> goes up.</h1>
 	   
 	   <input class="text-center" bind:value={inputTicker} placeholder={placeholderTicker}>
            <button class="text-center" on:click={clickHandler}>
