@@ -15,6 +15,10 @@ const sp500Tickers = ["BT", "ABBV", "ABMD", "ACN", "ATVI", "ADBE", "AMD"];//, "A
 function createRandomStockChart(){
 	return publicUrl+_.sample(sp500Tickers)+'/embed'
 }
+
+function createStockChart(){
+	return publicUrl+_.sample(sp500Tickers)+'/embed'
+}
 	
 	let time = new Date();
 	let beacon = 0;
@@ -48,13 +52,17 @@ function beaconSample(beacon,sampler) {
 </style>
 
    <div class="card" >
-	   <h1 class="text-center">Merging {beaconSample(beacon,sourceData)} data.</h1>
-	   <h1 class="text-center">To predict if {beaconSample(beacon,sp500Tickers)} goes up.</h1>
+	   <h1 class="text-center">Merging <span background="gold">{beaconSample(beacon,sourceData)}</span> data.</h1>
+	   <h1 class="text-center">To predict if <strong>{beaconSample(beacon,sp500Tickers)}</strong> goes up.</h1>
+	   
+<!--
     <div class="row">
 	    <div class="text-center">
 		<img src={createRandomAvataar()} height=300 class="text-center"/>
 	    </div> 
     </div>
+
+	   
     <div class="row">
 	<div class="text-center">
 		<iframe src={createRandomStockChart()} height=420 width=600 frameborder="0" allow="encrypted-media" allowfullscreen allowtransparency> </iframe>
@@ -62,6 +70,7 @@ function beaconSample(beacon,sampler) {
     </div>
 
     <div class="row">
-    </div>
 
+    </div>
+-->
    </div>
