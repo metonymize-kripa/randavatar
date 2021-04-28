@@ -65,7 +65,7 @@ function clickHandler(){
 	   <h1 class="text-center">Merging <em>{beaconSample(beacon,sourceData)}</em> data.</h1>
 	   <h1 class="text-center">To predict if <strong>{placeholderTicker}</strong> goes up.</h1>
 	   
-	   <input class="text-center" bind:value={inputTicker} placeholder={placeholderTicker}>
+	   <input class="text-center" size="20" bind:value={inputTicker} placeholder={placeholderTicker}>
            <button class="text-center" on:click={clickHandler}>
 		Go
 	   </button>
