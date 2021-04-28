@@ -64,7 +64,7 @@ function clickHandler(){
 </style>
 
    <div class="card" >
-	   <h1 class="text-center">Link into <em in:fade>{beaconSample(beacon,sourceData)}</em> data, and more.</h1>
+	   <h1 class="text-center">Link into <em transition:fade>{beaconSample(beacon,sourceData)}</em> data, and more.</h1>
 	   <h1 class="text-center">To predict if $<strong>{placeholderTicker}</strong> goes up.</h1>
 	   
 	   <input class="text-center" width="50" bind:value={inputTicker} placeholder={placeholderTicker}>
