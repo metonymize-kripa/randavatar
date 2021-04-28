@@ -15,7 +15,7 @@ function createRandomStockChart(){
 	return publicUrl+_.sample(sp500Tickers)+'/embed'
 }
 	let time = new Date();
-	$: seconds = time.getSeconds();
+	$: beacon = Math.round(time.getSeconds()/5)%2;
 	onMount(() => {
 		const interval = setInterval(() => {
 			time = new Date();
@@ -40,7 +40,7 @@ function createRandomStockChart(){
 </style>
 
    <div class="card" >
-	   <h1 class="text-center">Chernoff {seconds}.0</h1>
+	   <h1 class="text-center">Chernoff {beacon}.0</h1>
     <div class="row">
 	<img src={createRandomAvataar()} height=300 class="text-center"/>
     </div>
