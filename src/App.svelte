@@ -42,7 +42,7 @@ function beaconSample(beacon,sampler) {
 }
 	
 function updatePlaceholderTicker(){
-	placeholderTicker = return _.sample(sp500Tickers);
+	placeholderTicker = _.sample(sp500Tickers);
 }
 	
 function clickHandler(){
