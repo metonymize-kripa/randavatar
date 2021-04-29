@@ -65,25 +65,7 @@ function clickHandler(){
 	}
 </style>
 
-<ContactCard>
-	<span slot="name">
-		Bearfox
-	</span>
-
-	<span slot="address">
-		Social.Oracled.com
-	</span>
-	
-	<span slot="email">
-		bearfox@oracled.com
-	</span>
-</ContactCard>
-
-   <div class="card" >
-	   <h1 class="text-center" transition:fade>Link into <em>{beaconSample(beacon,sourceData)}</em> data, and more.</h1>
-	   <h1 class="text-center">To predict if $<strong>{placeholderTicker}</strong> goes up.</h1>
-
-<!--
+<div>
     <div class="row">
 	    <div class="text-center">
 		<img src={createRandomAvataar()} height=300 class="text-center"/>
@@ -100,5 +82,4 @@ function clickHandler(){
     <div class="row">
 
     </div>
--->
    </div>
