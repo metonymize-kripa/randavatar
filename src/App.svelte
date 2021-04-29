@@ -8,6 +8,8 @@
   import { onMount } from "svelte";
   import { fade } from 'svelte/transition';
   import {makeString, createRandomAvataar} from './utils.js';
+  import ContactCard from './ContactCard.svelte';
+	
   import _ from "underscore";
 	
 const publicUrl = 'https://public.com/stocks/';
@@ -63,14 +65,20 @@ function clickHandler(){
 	}
 </style>
 
+<ContactCard>
+	<span slot="name">
+		Bearfox
+	</span>
+
+	<span slot="address">
+		Oracled.com
+	</span>
+</ContactCard>
+
    <div class="card" >
 	   <h1 class="text-center" transition:fade>Link into <em>{beaconSample(beacon,sourceData)}</em> data, and more.</h1>
 	   <h1 class="text-center">To predict if $<strong>{placeholderTicker}</strong> goes up.</h1>
-	   
-	   <input class="text-center" width="50" bind:value={inputTicker} placeholder={placeholderTicker}>
-           <button class="text-center" on:click={clickHandler}>
-		Go
-	   </button>
+
 <!--
     <div class="row">
 	    <div class="text-center">
