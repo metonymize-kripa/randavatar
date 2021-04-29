@@ -71,7 +71,11 @@ function clickHandler(){
 	</span>
 
 	<span slot="address">
-		Oracled.com
+		Social.Oracled.com
+	</span>
+	
+	<span slot="email">
+		bearfox@oracled.com
 	</span>
 </ContactCard>
 
